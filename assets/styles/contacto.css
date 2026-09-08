@@ -1,0 +1,71 @@
+/* Tabla de Horarios */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 480px;
+    margin-top: 12px;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px 14px;
+    border: 1px solid #d1d5db;
+}
+
+th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+/* Formulario */
+.formulario-contacto {
+    max-width: 500px;
+    margin-top: 15px;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #333333;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #1976a8;
+}
+
+.btn-enviar {
+    background-color: #1976a8;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #12557a;
+}
