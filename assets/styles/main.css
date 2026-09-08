@@ -68,7 +68,7 @@ main {
     border-radius: 6px;
     border: 1px solid #e9ecef;
     min-height: 450px;
-    flex: 1; /* Asegura que empuje el footer al fondo */
+    flex: 1;
 }
 
 h1 {
@@ -94,6 +94,7 @@ li {
 
 /* Pie de Página */
 footer {
+    display: inline-block;
     text-align: center;
     padding: 22px 15px;
     background-color: #2d3748;
