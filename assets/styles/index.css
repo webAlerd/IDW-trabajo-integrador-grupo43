@@ -1,40 +1,48 @@
-/* Tarjetas de Profesionales */
-.profesionales {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 15px;
-}
-
-.veterinario {
-    flex: 1 1 240px;
+.veterinario-card {
     border: 1px solid #dcdfe3;
     border-top: 4px solid #1976a8;
     border-radius: 6px;
-    padding: 20px;
     background-color: #fbfcfd;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.veterinario h3 {
+.veterinario-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.veterinario-card h3 {
     margin-top: 0;
     color: #1976a8;
     font-size: 1.15rem;
 }
 
-.veterinario .especialidad {
+.veterinario-card .especialidad {
     color: #555555;
     font-size: 0.95rem;
     margin-bottom: 8px;
 }
 
-.veterinario .precio {
+.veterinario-card .precio {
     font-weight: bold;
     color: #2b7a4b;
     margin: 0;
 }
 
-@media (max-width: 600px) {
-    .profesionales {
-        flex-direction: column;
+.btn-accion {
+    background-color: #1976a8;
+    border-color: #1976a8;
+    padding: 10px 24px;
+    font-weight: bold;
+}
+
+.btn-accion:hover {
+    background-color: #12557a;
+    border-color: #12557a;
+}
+
+@media (max-width: 768px) {
+    .veterinario-card {
+        margin-bottom: 10px;
     }
 }
