@@ -1,0 +1,32 @@
+.institucional {
+min-height: 600px;
+}
+
+.institucional p {
+line-height: 1.7;
+}
+
+
+.institucional .card {
+border: none;
+border-radius: 15px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.institucional .card h2 {
+color: #075985;
+}
+
+
+.valor {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+border-left: 5px solid #0d6efd;
+height: 100%;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.valor {
+background-color: #e8f7fc;
+}

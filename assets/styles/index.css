@@ -1,40 +1,60 @@
-/* Tarjetas de Profesionales */
-.profesionales {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 15px;
+.hero {
+background: linear-gradient(
+135deg,
+#e0f7ff,
+#ffffff
+);
 }
 
-.veterinario {
-    flex: 1 1 240px;
-    border: 1px solid #dcdfe3;
-    border-top: 4px solid #1976a8;
-    border-radius: 6px;
-    padding: 20px;
-    background-color: #fbfcfd;
+.hero h1 {
+color: #075985;
 }
 
-.veterinario h3 {
-    margin-top: 0;
-    color: #1976a8;
-    font-size: 1.15rem;
+.servicio {
+border: none;
+border-radius: 15px;
+transition: transform 0.3s;
 }
 
-.veterinario .especialidad {
-    color: #555555;
-    font-size: 0.95rem;
-    margin-bottom: 8px;
+.servicio {
+transform: translateY(-5px);
 }
 
-.veterinario .precio {
-    font-weight: bold;
-    color: #2b7a4b;
-    margin: 0;
+.icono {
+font-size: 45px;
+margin-bottom: 15px;
 }
 
-@media (max-width: 600px) {
-    .profesionales {
-        flex-direction: column;
-    }
+
+.profesionales-seccion {
+background-color: #e8f7fc;
+}
+
+.profesional {
+border: none;
+border-radius: 15px;
+}
+
+.foto-profesional {
+font-size: 60px;
+margin-bottom: 10px;
+}
+
+.especialidad {
+color: #0e7490;
+font-weight: bold;
+}
+
+.precio {
+color: #198754;
+font-weight: bold;
+}
+
+
+.mensaje-final {
+background-color: #ffffff;
+}
+
+.mensaje-final h2 {
+color: #075985;
 }
