@@ -1,0 +1,66 @@
+.institucional-card {
+    border: 1px solid #dcdfe3;
+    border-top: 4px solid #1976a8;
+    border-radius: 6px;
+    background-color: #fbfcfd;
+}
+
+.institucional-card h2 {
+    color: #1976a8;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.valor-item {
+    background-color: #f1f8fc;
+    padding: 16px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #1976a8;
+    height: 100%;
+    color: #2b2b2b;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+}
+
+[data-bs-theme="dark"] .institucional-card {
+    background-color: #293847;
+    border-color: #425365;
+    border-top-color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .institucional-card h2 {
+    color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .institucional-card p {
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .valor-item {
+    background-color: #293847;
+    border-left-color: #8ac9eb;
+    color: #e5edf5;
+}
+
+@media (max-width: 992px) {
+    .valor-item {
+        padding: 14px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .institucional-card {
+        margin-bottom: 8px;
+    }
+
+    .valor-item {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .valor-item {
+        padding: 12px 14px;
+    }
+}

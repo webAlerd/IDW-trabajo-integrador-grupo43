@@ -1,98 +1,124 @@
-/* Tabla de Horarios */
-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 480px;
-    margin-top: 12px;
+.contacto-card {
+    border: 1px solid #dcdfe3;
+    border-top: 4px solid #1976a8;
+    border-radius: 6px;
+    background-color: #fbfcfd;
 }
 
-th, td {
-    text-align: left;
-    padding: 10px 14px;
-    border: 1px solid #d1d5db;
+.contacto-card h2 {
+    color: #1976a8;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
 }
 
-th {
+.table th {
     background-color: #f1f5f9;
     color: #1e293b;
     font-weight: bold;
 }
 
-/* Formulario */
-.formulario-contacto {
-    max-width: 500px;
-    margin-top: 15px;
-}
-
-.campo {
-    margin-bottom: 16px;
-}
-
 .campo label {
-    display: block;
     font-weight: bold;
-    margin-bottom: 6px;
     font-size: 0.9rem;
     color: #333333;
 }
 
-.campo input,
-.campo select,
-.campo textarea {
-    width: 100%;
-    padding: 9px 12px;
+.campo .form-control,
+.campo .form-select {
     border: 1px solid #cccccc;
     border-radius: 4px;
-    font-family: inherit;
     font-size: 0.95rem;
 }
 
-.campo input:focus,
-.campo select:focus,
-.campo textarea:focus {
-    outline: none;
+.campo .form-control:focus,
+.campo .form-select:focus {
     border-color: #1976a8;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 168, 0.15);
 }
 
 .btn-enviar {
     background-color: #1976a8;
+    border-color: #1976a8;
     color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 0.95rem;
     font-weight: bold;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+    padding: 10px 20px;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-enviar:hover {
     background-color: #12557a;
+    border-color: #12557a;
+    color: #ffffff;
 }
 
-[data-bs-theme="dark"] th,
-[data-bs-theme="dark"] td {
+[data-bs-theme="dark"] .contacto-card {
+    background-color: #293847;
+    border-color: #425365;
+    border-top-color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .contacto-card h2 {
+    color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .contacto-card p {
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .table {
+    color: #e5edf5;
     border-color: #425365;
 }
 
-[data-bs-theme="dark"] th {
+[data-bs-theme="dark"] .table th {
+    background-color: #1d2731;
+    color: #8ac9eb;
+    border-color: #425365;
+}
+
+[data-bs-theme="dark"] .table td {
     background-color: #293847;
     color: #e5edf5;
+    border-color: #425365;
 }
 
 [data-bs-theme="dark"] .campo label {
     color: #e5edf5;
 }
 
-[data-bs-theme="dark"] .campo input,
-[data-bs-theme="dark"] .campo select,
-[data-bs-theme="dark"] .campo textarea {
-    background-color: #293847;
+[data-bs-theme="dark"] .campo .form-control,
+[data-bs-theme="dark"] .campo .form-select {
+    background-color: #202c39;
     border-color: #596b7c;
     color: #e5edf5;
 }
 
-[data-bs-theme="dark"] .campo input::placeholder,
-[data-bs-theme="dark"] .campo textarea::placeholder {
+[data-bs-theme="dark"] .campo .form-control::placeholder {
     color: #aebdcc;
+}
+
+[data-bs-theme="dark"] .campo .form-control:focus,
+[data-bs-theme="dark"] .campo .form-select:focus {
+    border-color: #8ac9eb;
+    box-shadow: 0 0 0 0.2rem rgba(138, 201, 235, 0.2);
+}
+
+@media (max-width: 992px) {
+    .contacto-card {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contacto-card {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 576px) {
+    .table th,
+    .table td {
+        padding: 8px 10px;
+        font-size: 0.88rem;
+    }
 }

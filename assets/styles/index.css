@@ -1,15 +1,14 @@
-/* Tarjetas de Profesionales */
-.profesionales {
-    margin-top: 15px;
-}
-
-.veterinario {
+.veterinario-card {
     border: 1px solid #dcdfe3;
     border-top: 4px solid #1976a8;
     border-radius: 6px;
-    padding: 20px;
     background-color: #fbfcfd;
-    color: #2b2b2b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.veterinario-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .foto-profesional {
@@ -17,46 +16,80 @@
     height: 190px;
     object-fit: cover;
     object-position: center 30%;
-    border-radius: 4px;
-    margin-bottom: 12px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
-.veterinario h3 {
+.veterinario-card h3 {
     margin-top: 0;
-    margin-bottom: 1em;
+    margin-bottom: 0.5rem;
     color: #1976a8;
     font-size: 1.15rem;
     font-weight: bold;
-    line-height: 1.6;
 }
 
-.veterinario .especialidad {
+.veterinario-card .especialidad {
     color: #555555;
     font-size: 0.95rem;
     margin-bottom: 8px;
 }
 
-.veterinario .precio {
+.veterinario-card .precio {
     font-weight: bold;
     color: #2b7a4b;
     margin: 0;
 }
 
-[data-bs-theme="dark"] .veterinario {
+.btn-accion {
+    background-color: #1976a8;
+    border-color: #1976a8;
+    padding: 10px 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.btn-accion:hover {
+    background-color: #12557a;
+    border-color: #12557a;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .veterinario-card {
     background-color: #293847;
     border-color: #425365;
     border-top-color: #8ac9eb;
 }
 
-[data-bs-theme="dark"] .veterinario h3 {
+[data-bs-theme="dark"] .veterinario-card h3 {
     color: #8ac9eb;
 }
 
-[data-bs-theme="dark"] .veterinario .especialidad {
+[data-bs-theme="dark"] .veterinario-card .especialidad {
     color: #d4e2ec;
 }
 
-[data-bs-theme="dark"] .veterinario .precio {
+[data-bs-theme="dark"] .veterinario-card .precio {
     color: #8ed2a2;
 }
 
+@media (max-width: 992px) {
+    .foto-profesional {
+        height: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .veterinario-card {
+        margin-bottom: 10px;
+    }
+
+    .foto-profesional {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .foto-profesional {
+        height: 220px;
+    }
+}
