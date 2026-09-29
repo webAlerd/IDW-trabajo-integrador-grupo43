@@ -11,10 +11,21 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+.foto-profesional {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center 30%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
 .veterinario-card h3 {
     margin-top: 0;
+    margin-bottom: 0.5rem;
     color: #1976a8;
     font-size: 1.15rem;
+    font-weight: bold;
 }
 
 .veterinario-card .especialidad {
@@ -34,15 +45,51 @@
     border-color: #1976a8;
     padding: 10px 24px;
     font-weight: bold;
+    color: #ffffff;
 }
 
 .btn-accion:hover {
     background-color: #12557a;
     border-color: #12557a;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .veterinario-card {
+    background-color: #293847;
+    border-color: #425365;
+    border-top-color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .veterinario-card h3 {
+    color: #8ac9eb;
+}
+
+[data-bs-theme="dark"] .veterinario-card .especialidad {
+    color: #d4e2ec;
+}
+
+[data-bs-theme="dark"] .veterinario-card .precio {
+    color: #8ed2a2;
+}
+
+@media (max-width: 992px) {
+    .foto-profesional {
+        height: 180px;
+    }
 }
 
 @media (max-width: 768px) {
     .veterinario-card {
         margin-bottom: 10px;
+    }
+
+    .foto-profesional {
+        height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    .foto-profesional {
+        height: 220px;
     }
 }

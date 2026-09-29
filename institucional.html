@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Institucional - Veterinaria La Mary</title>
+    <script src="assets/scripts/tema.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/institucional.css">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navegación principal">
             <div class="container">
-                <a class="navbar-brand logo" href="index.html">Veterinaria La Mary</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Alternar navegacion">
+                <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+                    <img src="assets/img/icon.png" alt="Logo de Veterinaria La Mary" class="logo-icono me-2">
+                    Veterinaria La Mary
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Mostrar u ocultar menú">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
-                    <ul class="navbar-nav mb-2 mb-lg-0 menu">
+                    <ul class="navbar-nav mb-2 mb-lg-0 menu me-lg-3">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">Inicio</a>
                         </li>
@@ -31,67 +36,90 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                     </ul>
+                    <button class="btn btn-outline-secondary theme-toggle" type="button" id="cambiarTema" aria-pressed="false">Modo oscuro</button>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="container my-4 p-4 bg-white rounded shadow-sm">
+    <main class="container my-4 p-4 bg-body rounded shadow-sm">
         <h1>Sobre Nosotros</h1>
         <p>
-            Veterinaria La Mary abrio sus puertas en 1997 con la idea de ofrecer
-            atencion cercana y de confianza a los animales del barrio. Con el
+            Veterinaria La Mary abrió sus puertas en 1997 con la idea de ofrecer
+            atención cercana y de confianza a los animales del barrio. Con el
             tiempo sumamos especialistas y equipamiento propio, sin perder la
-            cercania y el compromiso que nos caracterizo desde el primer dia.
+            cercanía y el compromiso que nos caracterizó desde el primer día.
         </p>
 
-        <!-- AQUI VA UNA FOTO -->
+        <div class="banner-institucional my-4">
+            <img src="assets/img/perrito1.png" class="img-fluid rounded banner-foto" alt="Mascota en Veterinaria La Mary">
+        </div>
 
         <p>
             Hoy somos un equipo de profesionales de distintas especialidades que
             trabaja de forma coordinada, llevando un registro completo de la
-            historia clinica de cada mascota.
+            historia clínica de cada mascota.
         </p>
 
         <section class="row g-4 my-3">
             <div class="col-12 col-md-6">
-                <div class="p-4 bg-light rounded border h-100">
-                    <h2>Mision</h2>
-                    <p>
-                        Brindar atencion veterinaria integral, accesible y de calidad,
-                        priorizando el bienestar del animal y la tranquilidad de quienes lo
-                        acompanan.
-                    </p>
+                <div class="card h-100 institucional-card">
+                    <div class="card-body">
+                        <h2 class="h4">Misión</h2>
+                        <p class="card-text">
+                            Brindar atención veterinaria integral, accesible y de calidad,
+                            priorizando el bienestar del animal y la tranquilidad de quienes lo
+                            acompañan.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div class="col-12 col-md-6">
-                <div class="p-4 bg-light rounded border h-100">
-                    <h2>Vision</h2>
-                    <p>
-                        Ser la veterinaria de referencia de la zona, reconocida por la
-                        calidez del trato y el seguimiento a largo plazo de cada paciente.
-                    </p>
+                <div class="card h-100 institucional-card">
+                    <div class="card-body">
+                        <h2 class="h4">Visión</h2>
+                        <p class="card-text">
+                            Ser la veterinaria de referencia de la zona, reconocida por la
+                            calidez del trato y el seguimiento a largo plazo de cada paciente.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- AQUI VA UNA FOTO -->
 
-        <section class="my-4">
+        <section class="valores-seccion my-4">
             <h2>Nuestros Valores</h2>
-            <ul class="list-group list-group-flush border rounded mt-3">
-                <li class="list-group-item">Trato cercano con cada familia y su mascota.</li>
-                <li class="list-group-item">Seguimiento real a traves de la historia clinica.</li>
-                <li class="list-group-item">Formacion continua de nuestros profesionales.</li>
-                <li class="list-group-item">Responsabilidad con los horarios y turnos asignados.</li>
-            </ul>
+            <div class="row g-3 mt-1">
+                <div class="col-12 col-md-6">
+                    <div class="valor-item">
+                        Trato cercano con cada familia y su mascota.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="valor-item">
+                        Seguimiento real a través de la historia clínica.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="valor-item">
+                        Formación continua de nuestros profesionales.
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="valor-item">
+                        Responsabilidad con los horarios y turnos asignados.
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>Veterinaria La Mary | &copy; 2026. Todos los derechos reservados.</p>
-        <p>Direccion: Av. Principal 123 | Telefono: 0343 - 1234567</p>
+        <p>Dirección: Av. Principal 123 | Teléfono: 0343 - 1234567</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
