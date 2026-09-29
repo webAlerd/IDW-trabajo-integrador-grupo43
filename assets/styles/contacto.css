@@ -69,3 +69,30 @@ th {
 .btn-enviar:hover {
     background-color: #12557a;
 }
+
+[data-bs-theme="dark"] th,
+[data-bs-theme="dark"] td {
+    border-color: #425365;
+}
+
+[data-bs-theme="dark"] th {
+    background-color: #293847;
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .campo label {
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .campo input,
+[data-bs-theme="dark"] .campo select,
+[data-bs-theme="dark"] .campo textarea {
+    background-color: #293847;
+    border-color: #596b7c;
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .campo input::placeholder,
+[data-bs-theme="dark"] .campo textarea::placeholder {
+    color: #aebdcc;
+}
