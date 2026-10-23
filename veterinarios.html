@@ -1,153 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Veterinarios - Veterinaria La Mary</title>
     <script src="assets/scripts/tema.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="assets/styles/veterinarios.css">
-    <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg">
+    <link rel="icon" type="image/png" href="assets/img/icon.png">
 </head>
+
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg" aria-label="Navegación principal">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/img/icon.png" alt="" class="logo-icono">
-                <span>Veterinaria La Mary</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Mostrar u ocultar menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuNavegacion">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="institucional.html">Institucional</a></li>
-                    <li class="nav-item"><a class="nav-link" href="mascotas.html">Mascotas</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="veterinarios.html" aria-current="page">Veterinarios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                </ul>
-                <button class="btn btn-outline-primary btn-sm theme-toggle" type="button" id="cambiarTema" aria-pressed="false">Modo oscuro</button>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="Navegación principal">
+            <div class="container">
+                <a class="navbar-brand logo d-flex align-items-center" href="index.html">
+                    <img src="assets/img/icon.png" alt="Logo de Veterinaria La Mary" class="logo-icono me-2">
+                    Veterinaria La Mary
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Mostrar u ocultar menú">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                    <ul class="navbar-nav mb-2 mb-lg-0 menu me-lg-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="institucional.html">Institucional</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mascotas.html">Mascotas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="veterinarios.html">Veterinarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-secondary theme-toggle" type="button" id="cambiarTema" aria-pressed="false">Modo oscuro</button>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
+        </nav>
+    </header>
 
-<main class="container py-5">
+    <main class="container my-4 p-4 bg-body rounded shadow-sm">
+        <h1>Administración de Veterinarios</h1>
+        <p class="lead">Registrar, modificar, consultar y eliminar veterinarios.</p>
 
-        <section class="text-center mb-5 admin-intro">
-            <h1 class="display-5 fw-bold">Administración de Veterinarios</h1>
-            <p class="lead">
-                Registrá, consultá, modificá y eliminá los datos de los profesionales.
-            </p>
-        </section>
+        <div class="card shadow-sm mb-5 admin-card">
+            <div class="card-header">
+                <h2 class="h5 mb-0 text-white">
+                    <i class="bi bi-plus-circle"></i>
+                    Registrar veterinario
+                </h2>
+            </div>
 
-        <section class="card shadow-sm mb-5 admin-card">
-            <div class="card-body p-4">
-
-                <h2 class="h3 mb-4">Datos del Veterinario</h2>
-
+            <div class="card-body">
                 <form id="formVeterinario">
-
                     <input type="hidden" id="idVeterinario">
 
                     <div class="row g-3">
-
-                        <div class="col-12 col-md-6">
+                        <div class="col-md-6">
                             <label for="matricula" class="form-label">Matrícula</label>
-                            <input type="number" class="form-control"
-                                id="matricula" name="matricula"
-                                min="1" step="1" required>
+                            <input type="number" class="form-control" id="matricula" name="matricula" min="1" step="1" required>
                         </div>
 
-                        <div class="col-12 col-md-6">
+                        <div class="col-md-6">
                             <label for="nombre" class="form-label">Nombre y apellido</label>
-                            <input type="text" class="form-control"
-                                id="nombre" name="nombre"
-                                maxlength="100" required>
+                            <input type="text" class="form-control" id="nombre" name="nombre" maxlength="100" required>
                         </div>
 
-                        <div class="col-12 col-md-6">
+                        <div class="col-md-6">
                             <label for="especializacion" class="form-label">Especialización</label>
-                            <input type="text" class="form-control"
-                                id="especializacion" name="especializacion"
-                                maxlength="100" required>
+                            <input type="text" class="form-control" id="especializacion" name="especializacion" maxlength="100" required>
                         </div>
 
-                        <div class="col-12 col-md-6">
+                        <div class="col-md-6">
                             <label for="valorConsulta" class="form-label">Valor de consulta ($)</label>
-                            <input type="number" class="form-control"
-                                id="valorConsulta" name="valorConsulta"
-                                min="0" step="0.01" required>
+                            <input type="number" class="form-control" id="valorConsulta" name="valorConsulta" min="0" step="0.01" required>
                         </div>
-
                     </div>
 
                     <div class="mt-4">
                         <button type="submit" id="btnGuardar" class="btn btn-primary">
-                            Guardar veterinario
+                            <i class="bi bi-save"></i> Guardar veterinario
                         </button>
 
-                        <button type="button" id="btnCancelar"
-                            class="btn btn-secondary d-none">
-                            Cancelar edición
+                        <button type="button" id="btnCancelar" class="btn btn-secondary d-none">
+                            <i class="bi bi-x-circle"></i> Cancelar edición
                         </button>
                     </div>
-
                 </form>
-
             </div>
-        </section>
+        </div>
 
-        <section class="card shadow-sm admin-card">
-            <div class="card-body p-4">
+        <div class="card shadow-sm admin-card">
+            <div class="card-header d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <h2 class="h5 mb-0 text-white">
+                    <i class="bi bi-list-ul"></i>
+                    Veterinarios registrados
+                </h2>
 
-                <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
-                    <h2 class="h3 mb-0">Veterinarios registrados</h2>
+                <span class="badge text-bg-primary">
+                    Total: <span id="totalVeterinarios">0</span>
+                </span>
+            </div>
 
-                    <span class="badge text-bg-primary fs-6">
-                        Total: <span id="totalVeterinarios">0</span>
-                    </span>
-                </div>
-
-                <div id="mensajeSinVeterinarios" class="alert alert-info d-none">
-                    Todavía no hay veterinarios registrados.
-                </div>
-
+            <div class="card-body">
                 <div class="table-responsive">
-                    <table class="table table-striped table-hover table-bordered align-middle">
-
+                    <table class="table table-striped table-hover align-middle">
                         <thead class="table-primary">
                             <tr>
                                 <th scope="col">Matrícula</th>
                                 <th scope="col">Nombre</th>
                                 <th scope="col">Especialización</th>
                                 <th scope="col">Valor de consulta</th>
-                                <th scope="col">Acciones</th>
+                                <th scope="col" class="text-center">Acciones</th>
                             </tr>
                         </thead>
 
                         <tbody id="tablaVeterinarios"></tbody>
-
                     </table>
                 </div>
 
+                <div id="mensajeSinVeterinarios" class="text-center text-muted py-4">
+                    No hay veterinarios registrados.
+                </div>
             </div>
-        </section>
-
+        </div>
     </main>
 
-<footer>
-    <div class="container">
-        <p class="fw-bold">Veterinaria La Mary | &copy; 2026. Todos los derechos reservados.</p>
-        <p>Dirección: Av. Principal 123 | Teléfono: (0343) 555-1234</p>
-    </div>
-</footer>
+    <footer>
+        <p>Veterinaria La Mary | &copy; 2026. Todos los derechos reservados.</p>
+        <p>Dirección: Av. Principal 123 | Teléfono: 0343 - 1234567</p>
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- <script src="assets/scripts/veterinarios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="assets/scripts/veterinarios.js"></script>
 </body>
+
 </html>
