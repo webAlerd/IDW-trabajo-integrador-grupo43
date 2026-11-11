@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -49,14 +48,18 @@
                             <a class="nav-link active" aria-current="page" href="turnos.html">Turnos</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="historia-clinica.html">Historia Clínica</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item" id="enlaceLogin">
+                            <a class="nav-link" href="login.html">Iniciar sesión</a>
                         </li>
                     </ul>
 
-                    <button class="btn btn-outline-secondary theme-toggle" type="button" id="cambiarTema" aria-pressed="false">Modo oscuro
-                    </button>
-                    <button class="btn btn-outline-danger ms-lg-2" type="button" onclick="cerrarSesion()">Cerrar sesión
-                    </button>
+                    <button class="btn btn-outline-secondary theme-toggle" type="button" id="cambiarTema" aria-pressed="false">Modo oscuro</button>
+                    <button class="btn btn-outline-danger ms-lg-2 d-none" type="button" id="btnCerrarSesion" onclick="cerrarSesion()">Cerrar sesión</button>
                 </div>
             </div>
         </nav>

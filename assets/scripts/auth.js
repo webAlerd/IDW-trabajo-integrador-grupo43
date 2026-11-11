@@ -1,5 +1,3 @@
-
-
 const paginasAdministrativas = [
     "mascotas.html",
     "veterinarios.html",
@@ -14,20 +12,31 @@ if (paginasAdministrativas.includes(paginaActual) && !token) {
     window.location.replace("login.html");
 }
 
-document.querySelectorAll("a").forEach(function (enlace) {
-    const destino = enlace.getAttribute("href");
-
-    if (paginasAdministrativas.includes(destino)) {
-        enlace.classList.toggle("d-none", !token);
-    }
-});
-
 function cerrarSesion() {
     sessionStorage.removeItem("token");
     window.location.href = "index.html";
 }
-  const enlaceLogin = document.getElementById("enlaceLogin");
 
-if (enlaceLogin) {
-    enlaceLogin.classList.toggle("d-none", Boolean(token));
-}
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".navbar-nav .nav-link").forEach(function (enlace) {
+        const destino = enlace.getAttribute("href");
+
+        if (paginasAdministrativas.includes(destino)) {
+            const itemLista = enlace.parentElement;
+            if (itemLista) {
+                itemLista.classList.toggle("d-none", !token);
+            }
+        }
+    });
+
+    const enlaceLogin = document.getElementById("enlaceLogin");
+    const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+
+    if (enlaceLogin) {
+        enlaceLogin.classList.toggle("d-none", Boolean(token));
+    }
+
+    if (btnCerrarSesion) {
+        btnCerrarSesion.classList.toggle("d-none", !token);
+    }
+});
