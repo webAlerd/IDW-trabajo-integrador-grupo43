@@ -1,0 +1,101 @@
+
+body {
+    background-color: #f4f8fc;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+h1,
+h2 {
+    color: #1976a8;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #1976a8;
+    border-color: #1976a8;
+}
+
+.btn-primary:hover {
+    background-color: #125b82;
+    border-color: #125b82;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+#mensajeSinHistorias {
+    margin-top: 15px;
+}
+
+#detalleHistoria {
+    background-color: #f4f8fc;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+#detalleHistoria h3 {
+    color: #1976a8;
+    font-size: 1.2rem;
+}
+
+body.dark-mode {
+    background-color: #212529;
+    color: #f8f9fa;
+}
+
+body.dark-mode .card {
+    background-color: #343a40;
+    color: #f8f9fa;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode #detalleHistoria h3 {
+    color: #8ecdf0;
+}
+
+body.dark-mode #detalleHistoria {
+    background-color: #495057;
+}
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background-color: #495057;
+    color: #f8f9fa;
+    border-color: #6c757d;
+}
+
+body.dark-mode .form-control::placeholder {
+    color: #ced4da;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 20px !important;
+    }
+
+    .card {
+        padding: 15px !important;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+}

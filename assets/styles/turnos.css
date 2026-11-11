@@ -1,0 +1,143 @@
+
+body {
+    background-color: #f4f8fc;
+    font-family: Arial, sans-serif;
+    color: #34495e;
+}
+
+main h1,
+main h2 {
+    color: #1976a8;
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid #dcdfe3;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #1976a8;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 24px;
+}
+
+.form-label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid #cedbea;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #1976a8;
+    box-shadow: 0 0 0 0.2rem rgba(25, 118, 168, 0.15);
+}
+
+.btn {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+.table-responsive {
+    border-radius: 10px;
+}
+
+.table {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.table thead th {
+    background-color: #1976a8;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    padding: 12px;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 12px;
+}
+
+.table tbody tr:hover {
+    background-color: #eef6ff;
+}
+
+.badge {
+    color: #ffffff !important;
+}
+
+#totalTurnos {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+#mensajeSinTurnos {
+    color: #6c757d;
+    padding: 16px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+[data-bs-theme="dark"] .card {
+    background-color: #293847;
+    color: #e5edf5;
+    border-color: #425365;
+}
+
+[data-bs-theme="dark"] .card-header {
+    background-color: #1d2731;
+    color: #8ac9eb;
+    border-bottom: 1px solid #425365;
+}
+
+[data-bs-theme="dark"] .form-label {
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: #202c39;
+    border-color: #596b7c;
+    color: #e5edf5;
+}
+
+[data-bs-theme="dark"] .table tbody tr:hover {
+    background-color: #304356;
+}
+
+@media (max-width: 768px) {
+    main h1 {
+        font-size: 1.7rem;
+    }
+
+    .card-body {
+        padding: 16px;
+    }
+
+    .table {
+        font-size: 0.85rem;
+    }
+
+    .btn {
+        margin-bottom: 4px;
+    }
+}

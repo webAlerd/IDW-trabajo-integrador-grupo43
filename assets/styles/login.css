@@ -1,0 +1,48 @@
+
+body {
+    background-color: #f4f8fc;
+}
+
+main {
+    min-height: 70vh;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+}
+
+h1 {
+    color: #1976a8;
+    font-size: 1.8rem;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #1976a8;
+    border-color: #1976a8;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #125b82;
+    border-color: #125b82;
+}
+
+@media (max-width: 576px) {
+    main {
+        margin-top: 25px !important;
+    }
+
+    .card {
+        padding: 20px !important;
+    }
+}
